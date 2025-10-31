@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflexiones Diarias – Sentido de Vida</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #faf9f6;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    article {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #4b0082;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      color: #555;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reflexiones Diarias ✨</h1>
+    <p>por Leo Colasso</p>
+  </header>
+
+  <main id="contenedor"></main>
+
+  <footer>
+    <p>© 2025 Leo Colasso | Proyecto de crecimiento y conciencia</p>
+  </footer>
+
+  <script>
+    const escritos = [
+      {
+        titulo: "Origen y evolución del sentido de vida",
+        fecha: "30 de octubre de 2025",
+        contenido: `
+          <h3>1. El sentido de vida como impulso primario</h3>
+          <ul>
+            <li>Es lo que <strong>moviliza</strong> a la persona...</li>
+          </ul>
+          <p>El sentido de vida es la fuerza invisible que moviliza a cada persona...</p>
+        `
+      }
+    ];
+
+    const contenedor = document.getElementById("contenedor");
+    escritos.forEach(e => {
+      const article = document.createElement("article");
+      article.innerHTML = `
+        <h2>${e.titulo}</h2>
+        <small><em>${e.fecha}</em></small>
+        ${e.contenido}
+        <hr />
+      `;
+      contenedor.appendChild(article);
+    });
+  </script>
+</body>
+</html>
